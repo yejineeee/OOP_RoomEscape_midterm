@@ -1,4 +1,4 @@
-﻿room1 = game.createRoom("room1", "background_castle-.png")
+room1 = game.createRoom("room1", "background_castle-.png")
 room2 = game.createRoom("room2", "background_office.png")
 room3 = game.createRoom("room3", "배경-6.png")
 room4 = game.createRoom("room4", "background_soil-1.png")
@@ -88,7 +88,7 @@ room2.locateObject(room2.monitor, 690, 210);
 room2.monitor.lock()
 room2.monitor.onClick = function() {
 	if (room2.monitor.isLocked()) {
-		printMessage("컴퓨터 비밀번호를 입력하세요.\n728+10=807, 1003+20=1023, 1118+20=?");
+		printMessage("컴퓨터 비밀번호를 입력하세요.\n");
 		showKeypad("number", "1208", function() {
 			printMessage("프린터 작동하는 소리가 들린다.");
 			room2.printer.unlock()
@@ -97,6 +97,13 @@ room2.monitor.onClick = function() {
 	} else {
 		printMessage("프린터를 확인하세요.")
 	}
+}
+
+room2.paper3 = room2.createObject("paper3", "종이.png")
+room2.paper3.setWidth(30)
+room2.locateObject(room2.paper3, 670, 130)
+room2.paper3.onClick = function() {
+	showImageViewer("종이.png", "모니터문제.txt")
 }
 
 room2.printer = room2.createObject("printer", "printer-sw.png");
