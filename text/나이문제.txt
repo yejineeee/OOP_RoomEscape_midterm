@@ -1,5 +1,5 @@
-Darwin -69세
-Nobel - ?세
-Curie - 56세
-Bell - 31세  
-Edison - ?세
+Darwin = 69
+Nobel = ??
+Curie = 56
+Bell = 31  
+Edison = ??
